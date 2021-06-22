@@ -1,16 +1,17 @@
 import React from 'react'
-import { Text, View } from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import {Button, Icon} from 'react-native-elements'
 import UserList from './src/views/UserList'
 import UserForm from './src/views/UserForm'
+import { UsersProvider } from './src/context/UsersContext'
 
 
 const Stack = createStackNavigator()
 
 export default props => {
   return (
+    <UsersProvider>
    <NavigationContainer>
      <Stack.Navigator 
         initialRouteName="UserList"
@@ -41,6 +42,7 @@ export default props => {
        />
      </Stack.Navigator>
    </NavigationContainer>
+   </UsersProvider>
 )
 }
 
