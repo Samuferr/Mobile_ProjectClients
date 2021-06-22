@@ -21,7 +21,7 @@ export default props => {
           component={UserList}
           options={({navigation}) => {
             return {
-            title:"Formulário de Usuários",
+            title:"Lista de Usuários",
             headerRight: () => (
               <Button 
                 onPress={() => navigation.navigate("UserForm")}
